@@ -1,0 +1,49 @@
+// Delay Animation Mixin - Requires time
+@mixin delay-animation($delay){
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+// Animation Mixin - Requires Time
+@mixin transition($transition) {
+  -moz-transition:    all $transition cubic-bezier(.17,.67,.83,.67);;
+  -o-transition:      all $transition cubic-bezier(.17,.67,.83,.67);;
+  -webkit-transition: all $transition cubic-bezier(.17,.67,.83,.67);;
+  transition:         all $transition cubic-bezier(.17,.67,.83,.67);;
+}
+
+// Gradient Mixin - Requires Color
+@mixin gradient($color){
+  background: $color; /* Old browsers */
+  background: -moz-linear-gradient(left, $color 0%, darken($color, 10%) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $color 0%, darken($color, 10%) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $color 0%, darken($color, 10%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@mixin gradient-vertical($color){
+  background: $color; /* Old browsers */
+  background: -moz-linear-gradient(top, darken($color, 10%) 0%, $color 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, darken($color, 10%) 0%, $color 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, darken($color, 10%) 0%, $color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+@mixin button($color){
+  color: white;
+  padding: 15px 70px;
+  background: $color;
+  border-radius: 30px;
+  text-transform: uppercase;
+  -webkit-box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.05), 5px 3px 9px 0 rgba(0, 0, 0, 0.28);
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.05), 5px 3px 9px 0 rgba(0, 0, 0, 0.28);
+  @include transition(200ms);
+  &:active, &.active, &:hover {
+    outline: 0;
+    background:darken($color, 5%);
+    -webkit-box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.2), 5px 3px 9px 0 rgba(0, 0, 0, 0.28);
+    box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.2), 5px 3px 9px 0 rgba(0, 0, 0, 0.28);
+    color:white;
+  }
+
+}
