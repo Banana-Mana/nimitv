@@ -91,5 +91,13 @@ body, html {
   .col-lg-5in1 {
     width: 20%;
     float: left; } }
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .header ul li {
+    display: inline-block;
+    width: 75px;
+    background: #ff0d4c; }
 
 /*# sourceMappingURL=global.css.map */

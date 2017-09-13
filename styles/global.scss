@@ -2,44 +2,143 @@
 @import 'fonts';
 @import 'mixins';
 
-.delay-125ms {
+.delay-125ms{
   @include delay-animation(125ms);
 }
-
-.delay-250ms {
+.delay-250ms{
   @include delay-animation(250ms);
 }
-
-.delay-375ms {
+.delay-375ms{
   @include delay-animation(375ms);
 }
-
-.delay-500ms {
+.delay-500ms{
   @include delay-animation(500ms);
 }
-
-.delay-750ms {
+.delay-750ms{
   @include delay-animation(750ms);
 }
-
-.delay-1s {
+.delay-1s{
   @include delay-animation(1s);
 }
-
-.delay-12s {
+.delay-12s{
   @include delay-animation(1250ms);
 }
 
-body, html {
+$redNimi: #ff0d4c;
+$purpleNimi: #cd036f;
+
+$white: white;
+$black: black;
+
+body,html{
   width: 100%;
-  overflow-x: hidden;
-  padding: 0;
-  margin: 0;
+  overflow-x:hidden;
+  padding:0;
+  margin:0;
   font-size: 16px;
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0,0,0,.7);
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-weight:500;
 }
+
+
+
+.col-xs-5in1,
+.col-sm-5in1,
+.col-md-5in1,
+.col-lg-5in1 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-5in1 {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .col-sm-5in1 {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-5in1 {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-5in1 {
+    width: 20%;
+    float: left;
+  }
+}
+
+
+
+//Header
+.header{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: flex-end;
+  .logo{
+      &:after{
+        color:$redNimi;
+        content:'1000+ kanale  nga e gjithë bota';
+        font-size:0.9em;
+        font-weight:300;
+        position: absolute;
+        bottom: 10px;
+        left: 155px;
+    }
+  }
+  ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display: flex;
+    justify-content:flex-end;
+    li{
+      margin:0 1px;
+      text-align: center;
+      width:75px;
+      background:$redNimi;
+      color:$white;
+      font-size:0.875em;
+      border-bottom-left-radius:15px;
+      overflow:hidden;
+      padding:10px 0;
+      @include transition(150ms);
+      img{
+        margin:0 auto;
+        margin-bottom:20px;
+      }
+      span{
+        @include long-shadow(text, darken($redNimi, 10%), 55, true, false, right);
+      }
+      a{
+        width:100%;
+        height:100%;
+        padding:30px 0 10px 0;
+        display: block;
+        color:inherit;
+        text-decoration: none;
+      }
+      &:hover, &.active{
+        background:lighten($redNimi, 5%);
+        padding:0;
+        box-shadow: inset -5px -5px 0px darken($redNimi, 10%);
+      }
+    }
+  }
+}
+//Header Ends
 
 /***Footer Starts****/
 .footer {
@@ -83,45 +182,6 @@ body, html {
     }
   }
 }
-
-/****Footer Ends*****/
-
-.col-xs-5in1,
-.col-sm-5in1,
-.col-md-5in1,
-.col-lg-5in1 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.col-xs-5in1 {
-  width: 20%;
-  float: left;
-}
-
-@media (min-width: 768px) {
-  .col-sm-5in1 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 992px) {
-  .col-md-5in1 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-lg-5in1 {
-    width: 20%;
-    float: left;
-  }
-}
-
 @media (max-width: 414px) {
   .footer {
     .logo-footer {
@@ -135,3 +195,6 @@ body, html {
     }
   }
 }
+/****Footer Ends*****/
+
+@import 'responsive';

@@ -6,22 +6,19 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
 
     <!-- start-->
-    <meta name="description"
-          content="Shiko TV Kanale Shqip në TVALB | Filma Shqiptar në TVALB Kanada opa SHBA New York | IPTV subscription"/>
+    <meta name="description" content="Shiko TV Kanale Shqip në TVALB | Filma Shqiptar në TVALB Kanada opa SHBA New York | IPTV subscription"/>
     <meta name="keywords" content="IPTV Shqip në TVALB | Free iptv channels Kanada shqip | TV ALB USA ">
     <link rel="publisher" href="https://plus.google.com/101465759753545542171">
     <meta property="og:locale" content="en_us"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title"
-          content="Shiko TV Kanale Shqip në TVALB | Filma Shqiptar në TVALB USA New York opa Kanada"/>
-    <meta property="og:description" content=" Shikoni kanale Shqiptare | Kontakt TV ALB number ☎ (877)-448-8252 "/>
-    <meta property="og:url" content="#"/>
-    <meta property="og:site_name" content="TVALB kanale shqip"/>
-    <meta property="og:image" content="#"/>
-    <meta name="twitter:card" content="summary"/>
+    <meta property="og:title" content="Shiko TV Kanale Shqip në TVALB | Filma Shqiptar në TVALB USA New York opa Kanada" />
+    <meta property="og:description" content=" Shikoni kanale Shqiptare | Kontakt TV ALB number ☎ (877)-448-8252 " />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="TVALB kanale shqip" />
+    <meta property="og:image" content="#" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@tvalbchannel">
-    <meta name="twitter:description"
-          content=" Shikoni TV kanale Shqiptare në TVALB | Kontakt TVALB number ☎ (877)-448-8252"/>
+    <meta name="twitter:description" content=" Shikoni TV kanale Shqiptare në TVALB | Kontakt TVALB number ☎ (877)-448-8252" />
     <meta name="twitter:title" content="Albanian TV ALB Shqip"/>
     <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/783017749379485701/9q6sc2Z-_400x400.jpg"/>
     <meta name="twitter:creator" content="@tvalbchannel">
@@ -36,7 +33,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -49,6 +46,39 @@
     <link rel="stylesheet" href="styles/homepage.css">
 </head>
 <body>
+
+<!-- Header Starts -->
+    <div class="container">
+        <div class="header">
+            <div class="col-md-4 col-xs-12 logo">
+                <img src="img/logo.png" alt="nimitv logo" class="img-responsive">
+            </div>
+            <div href="#" class="visible-xs menu-trigger" id="menu-trigger">
+                <div class="bar"></div>
+            </div>
+            <div class="col-md-8 menubar" id="menubar">
+
+                <ul>
+                    <li class="active"><a href="#" title="home"><img src="img/icon-home.png" alt="Home" class="img-responsive"> <span>Ballina</span></a></li>
+                    <li><a href="#" title="home"><img src="img/icon-about-us.png" alt="About Us" class="img-responsive"> <span>Për Ne</span></a></li>
+                    <li><a href="#" title="home"><img src="img/icon-options.png" alt="Options" class="img-responsive"> <span>Opcionet</span></a></li>
+                    <li><a href="#" title="home"><img src="img/icon-buy.png" alt="Buy" class="img-responsive"> <span>Porosit</span></a></li>
+                    <li><a href="#" title="home"><img src="img/icon-refresh.png" alt="Refresh" class="img-responsive"> <span>Riabonimi</span></a></li>
+                    <li><a href="#" title="home"><img src="img/icon-contacts.png" alt="Contacts" class="img-responsive"> <span>Kontakti</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- Header Ends -->
+
+<!-- Content -->
+<div class="container">
+    <h1>Content Here</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloremque est, et id molestiae natus neque nobis numquam praesentium quidem quis quo quos saepe tenetur, voluptate. Accusantium fuga impedit porro.
+    </p>
+</div>
+<!-- Content Ends-->
 
 <!--Footer Starts-->
 <div class="container-fluid  text-center footer">
@@ -74,9 +104,17 @@
     </div>
 </div>
 <!--Footer Ends-->
+
+
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/isScrolledIntoView.js"></script>
-
+<script>
+    $('#menu-trigger').click(function() {
+        $(this).toggleClass('active');
+        $("#menu-trigger").find("> .bar").toggleClass('animate');
+        $('#menubar').toggleClass('active');
+    });
+</script>
 </body>
 </html>
