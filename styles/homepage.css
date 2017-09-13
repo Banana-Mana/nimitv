@@ -1,3 +1,136 @@
+@import url(animate.min.css);
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/Roboto-Regular.woff2) format("woff2"), url(../fonts/Roboto-Regular.woff) format("woff"), url(../fonts/Roboto-Regular.otf) format("otf"), url(../fonts/Roboto-Regular.ttf) format("truetype"), url(../fonts/Roboto-Regular.svg) format("svg"), url(../fonts/Roboto-Regular.eot) format("eot"); }
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: normal;
+  src: url(../fonts/Roboto-Light.woff2) format("woff2"), url(../fonts/Roboto-Light.woff) format("woff"), url(../fonts/Roboto-Light.otf) format("otf"), url(../fonts/Roboto-Light.ttf) format("truetype"), url(../fonts/Roboto-Light.svg) format("svg"), url(../fonts/Roboto-Light.eot) format("eot"); }
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/Roboto-Bold.woff2) format("woff2"), url(../fonts/Roboto-Bold.woff) format("woff"), url(../fonts/Roboto-Bold.otf) format("otf"), url(../fonts/Roboto-Bold.ttf) format("truetype"), url(../fonts/Roboto-Bold.svg) format("svg"), url(../fonts/Roboto-Bold.eot) format("eot"); }
+.delay-125ms {
+  -webkit-animation-delay: 125ms;
+  -moz-animation-delay: 125ms;
+  -o-animation-delay: 125ms;
+  animation-delay: 125ms; }
 
+.delay-250ms {
+  -webkit-animation-delay: 250ms;
+  -moz-animation-delay: 250ms;
+  -o-animation-delay: 250ms;
+  animation-delay: 250ms; }
+
+.delay-375ms {
+  -webkit-animation-delay: 375ms;
+  -moz-animation-delay: 375ms;
+  -o-animation-delay: 375ms;
+  animation-delay: 375ms; }
+
+.delay-500ms {
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms; }
+
+.delay-750ms {
+  -webkit-animation-delay: 750ms;
+  -moz-animation-delay: 750ms;
+  -o-animation-delay: 750ms;
+  animation-delay: 750ms; }
+
+.delay-1s {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.delay-12s {
+  -webkit-animation-delay: 1250ms;
+  -moz-animation-delay: 1250ms;
+  -o-animation-delay: 1250ms;
+  animation-delay: 1250ms; }
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; }
+
+/***Footer Starts****/
+.footer {
+  background: url(../img/footer-bg.jpg) no-repeat;
+  height: 612px;
+  background-size: cover;
+  color: white; }
+  .footer h3 {
+    font-weight: 700; }
+  .footer .logo-footer {
+    text-align: center;
+    margin: 130px auto 45px auto; }
+    .footer .logo-footer img {
+      margin: 0 auto; }
+  .footer .border-bottom {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px; }
+    .footer .border-bottom h4 {
+      display: inline-block;
+      margin: 0 15px; }
+    .footer .border-bottom img {
+      margin: 0 5px; }
+  .footer .footer-nav {
+    margin-top: 110px;
+    margin-bottom: 40px;
+    list-style-type: none; }
+    .footer .footer-nav li {
+      display: inline-block;
+      margin: 0 15px; }
+      .footer .footer-nav li a {
+        text-transform: uppercase;
+        color: white;
+        font-weight: 300; }
+
+/****Footer Ends*****/
+.col-xs-5in1,
+.col-sm-5in1,
+.col-md-5in1,
+.col-lg-5in1 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.col-xs-5in1 {
+  width: 20%;
+  float: left; }
+
+@media (min-width: 768px) {
+  .col-sm-5in1 {
+    width: 20%;
+    float: left; } }
+@media (min-width: 992px) {
+  .col-md-5in1 {
+    width: 20%;
+    float: left; } }
+@media (min-width: 1200px) {
+  .col-lg-5in1 {
+    width: 20%;
+    float: left; } }
+@media (max-width: 414px) {
+  .footer .logo-footer {
+    margin: 50px auto 15px auto; }
+  .footer .border-bottom {
+    padding-bottom: 20px; }
+    .footer .border-bottom h4 {
+      margin-top: 15px; } }
 
 /*# sourceMappingURL=homepage.css.map */
