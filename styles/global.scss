@@ -1,4 +1,4 @@
-@import 'animate.min.css';
+﻿@import 'animate.min.css';
 @import 'fonts';
 @import 'mixins';
 
@@ -24,13 +24,39 @@
   @include delay-animation(1250ms);
 }
 
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  background-color: #f0efef;
+}
+
+::-webkit-scrollbar
+{
+  width: 9px;
+  background-color: #f0efef;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,.3);
+  background-color: #9f9f9f;
+}
+
 $redNimi: #ff0d4c;
 $purpleNimi: #cd036f;
+$blueNimi: #038dca;
+$limeNimi: #a4be15;
+$orangeNimi: #ff8707;
 
 $white: white;
 $black: black;
 $grey: grey;
 
+
+$border-radius:10px;
+$cute-shadow:0 16px 38px -21px rgba(0,0,0,.9);
 
 body,html{
   width: 100%;
@@ -42,8 +68,50 @@ body,html{
   font-family: "Roboto", sans-serif;
   font-weight:500;
 }
+h1,h2,h3,h4,h5,h6{
+  font-weight:700;
+}
+.flex-container{
+  display: flex;
+}
 
+.btn{
+  border-radius: $border-radius;
+  position: relative;
+  @include transition(50ms);
+  &.btn.active, &.btn:active {
+    background-image: none;
+    outline: 0;
+    box-shadow: none;
+    top:3px;
+    margin-top:3px;
+    border-bottom:1px solid darken($purpleNimi, 10%);;
+  }
+  &.btn-purple{
+    background:$purpleNimi;
+    border-bottom:4px solid darken($purpleNimi, 10%);
+    color:$white;
+  }
+  &.btn-blue{
+    background:$blueNimi;
+    border-bottom:4px solid darken($blueNimi, 10%);
+    color:$white;
+  }
+  &.btn-lime{
+    background:$limeNimi;
+    border-bottom:4px solid darken($limeNimi, 10%);
+    color:$white;
+  }
+  &.btn-orange{
+    background:$orangeNimi;
+    border-bottom:4px solid darken($orangeNimi, 10%);
+    color:$white;
+  }
+}
 
+.inline-block{
+  display: inline-block;
+}
 
 .col-xs-5in1,
 .col-sm-5in1,
@@ -89,10 +157,11 @@ body,html{
   height:100%;
   display: flex;
   align-items: flex-end;
+  margin-bottom:10px;
   .logo{
       &:after{
         color:$redNimi;
-        content:'1000+ kanale  nga e gjith� bota';
+        content:'1000+ kanale  nga e gjithë bota';
         font-size:0.9em;
         font-weight:300;
         position: absolute;
@@ -133,14 +202,33 @@ body,html{
         text-decoration: none;
       }
       &:hover, &.active{
-        background:lighten($redNimi, 5%);
+        background:lighten($purpleNimi, 5%);
         padding:0;
-        box-shadow: inset -5px -5px 0px darken($redNimi, 10%);
+        box-shadow: inset -5px -5px 0px darken($purpleNimi, 10%);
+        span{
+          @include long-shadow(text, darken($purpleNimi, 10%), 55, true, false, right);
+        }
       }
     }
   }
 }
 //Header Ends
+
+
+// Carousel
+.carousel{
+  img{
+    width:100%;
+  }
+}
+// Carousel Ends
+
+.img-pop{
+  position: absolute;
+  z-index:2;
+  top:0;
+  left: 0;
+}
 
 /***Footer Starts****/
 .footer {

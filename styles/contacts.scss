@@ -10,23 +10,36 @@ h1 {
   margin: 30px auto;
   font-size: 20px;
 }
+.contacts{
+  background:#841541;
+  padding: 20px 0;
+  position: relative;
 
+}
 .left-purple {
   background: #841541 url(../img/contacts/left-purple.jpg) no-repeat;
-  height: 1500px;
-  width: 20%;
-  float: left;
+  height:100%;
+  width: 640px;
+  position: absolute;
+  top:0;
+  left: 0;
 }
-
+.right-purple {
+  background: url(../img/contacts/right-purple.jpg) no-repeat;
+  height:100%;
+  width: 640px;
+  position: absolute;
+  top:0;
+  right:0;
+}
 .central-purple {
   background: #841541;
-  height: 1500px;
-  width: 60%;
-  float: left;
+  position: relative;
+  z-index:3;
   .white-bg {
+    border-radius:$border-radius;
+    box-shadow:$cute-shadow;
     background: $white;
-    margin-top: 50px;
-    padding: 20px 30px;
     .social-icon {
       display: flex;
       flex-direction: row;
@@ -173,12 +186,7 @@ h1 {
   }
 }
 
-.right-purple {
-  background: url(../img/contacts/right-purple.jpg) no-repeat;
-  height: 1500px;
-  width: 20%;
-  float: left;
-}
+
 @media (max-width: 768px) {
 .central-purple{
   width: 100%;
