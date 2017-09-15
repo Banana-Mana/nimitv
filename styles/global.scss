@@ -29,6 +29,7 @@ $purpleNimi: #cd036f;
 
 $white: white;
 $black: black;
+$grey: grey;
 
 body,html{
   width: 100%;
@@ -90,7 +91,7 @@ body,html{
   .logo{
       &:after{
         color:$redNimi;
-        content:'1000+ kanale  nga e gjithë bota';
+        content:'1000+ kanale  nga e gjithï¿½ bota';
         font-size:0.9em;
         font-weight:300;
         position: absolute;
@@ -145,7 +146,7 @@ body,html{
   background: url(../img/footer-bg.jpg) no-repeat;
   height: 612px;
   background-size: cover;
-  color: white;
+  color: $white;
   h3 {
     font-weight: 700;
   }
@@ -176,7 +177,7 @@ body,html{
       margin: 0 15px;
       a {
         text-transform: uppercase;
-        color: white;
+        color: $white;
         font-weight: 300;
       }
     }
