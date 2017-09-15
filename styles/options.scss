@@ -34,7 +34,6 @@
 
 .boxes {
   padding: 70px 0;
-
   .img-responsive {
     margin: 15px auto;
   }
@@ -49,21 +48,21 @@
     margin: 0 auto;
 
     .tv-4k-box {
-      border-color: #a3d9ed;
+      border-color: lighten($blueNimi, 40%);
     }
     .smart-tv {
-      border-color: #eda3e2;
+      border-color: lighten($purpleNimi, 40%);
     }
     .android-tv {
-      border-color: #d4eda3;
+      border-color: lighten($limeNimi, 30%);
     }
     .pc-mac {
       margin-top: 30px;
-      border-color: #fde798;
+      border-color: lighten($orangeNimi, 25%);
     }
     .smart-phone {
       margin-top: 30px;
-      border-color: #fd9898;
+      border-color: lighten($redNimi, 25%);
     }
   }
 }
@@ -71,21 +70,26 @@
 @media (max-width: 414px) {
   .boxes {
     padding: 30px 0;
+    margin: 0 20px;
     .box {
       min-height: 0;
       margin-top: 10px;
       padding: 5px;
-      img {
-        display: none;
+      .img-box {
+        width: 50px;
+        display: inline-block;
+      }
+      h3 {
+        display: inline-block;
       }
     }
-      .first-row-box {
-        .pc-mac {
-          margin-top: 10px;
-        }
-        .smart-phone {
-          margin-top: 10px;
-        }
+    .first-row-box {
+      .pc-mac {
+        margin-top: 10px;
+      }
+      .smart-phone {
+        margin-top: 10px;
       }
     }
   }
+}
