@@ -85,27 +85,38 @@ h1,h2,h3,h4,h5,h6{
     box-shadow: none;
     top:3px;
     margin-top:3px;
-    border-bottom:1px solid darken($purpleNimi, 10%);;
   }
   &.btn-purple{
     background:$purpleNimi;
     border-bottom:4px solid darken($purpleNimi, 10%);
     color:$white;
+    &.btn.active, &.btn:active {
+      border-bottom:1px solid darken($purpleNimi, 10%);;
+    }
   }
   &.btn-blue{
     background:$blueNimi;
     border-bottom:4px solid darken($blueNimi, 10%);
     color:$white;
+    &.btn.active, &.btn:active {
+      border-bottom:1px solid darken($blueNimi, 10%);;
+    }
   }
   &.btn-lime{
     background:$limeNimi;
     border-bottom:4px solid darken($limeNimi, 10%);
     color:$white;
+    &.btn.active, &.btn:active {
+      border-bottom:1px solid darken($limeNimi, 10%);;
+    }
   }
   &.btn-orange{
     background:$orangeNimi;
     border-bottom:4px solid darken($orangeNimi, 10%);
     color:$white;
+    &.btn.active, &.btn:active {
+      border-bottom:1px solid darken($orangeNimi, 10%);;
+    }
   }
 }
 
@@ -215,13 +226,270 @@ h1,h2,h3,h4,h5,h6{
 //Header Ends
 
 
-// Carousel
-.carousel{
-  img{
+// Slider
+.slider{
+
+  .carousel-fade {
+    .carousel-inner {
+      .item {
+        transition-property: opacity;
+      }
+
+      .item, .active.left, .active.right {
+        opacity: 0;
+      }
+
+      .active, .next.left, .prev.right {
+        opacity: 1;
+      }
+
+      .next, .prev, .active.left, .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .carousel-control {
+      z-index: 2;
+    }
+  }
+
+  .slider-indicators{
+    position: absolute;
+    bottom:0;
+    z-index:9997;
     width:100%;
+    display: flex;
+    justify-content: space-around;
+    ul{
+      list-style: none;
+      margin: 0;
+      display: flex;
+      li{
+        color:$white;
+        font-size:1.150em;
+        width:19%;
+        padding: 15px 0 15px 10px;
+        border-top-right-radius: $border-radius * 3;
+        display: inline-flex;
+        overflow:hidden;
+        box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.27);
+        cursor:pointer;
+        @include transition(100ms);
+        &:nth-child(1){
+          background:rgba($redNimi, .8);
+          @include long-shadow(text, darken($redNimi, 10%), 70, true, false, right);
+        }
+        &:nth-child(2){
+          background:rgba($purpleNimi, .8);
+          @include long-shadow(text, darken($purpleNimi, 10%), 70, true, false, right);
+        }
+        &:nth-child(3){
+          background:rgba($orangeNimi, .8);
+          @include long-shadow(text, darken($orangeNimi, 10%), 70, true, false, right);
+        }
+        &:nth-child(4){
+          background:rgba($blueNimi, .8);
+          @include long-shadow(text, darken($blueNimi, 10%), 70, true, false, right);
+        }
+        &:nth-child(5){
+          background:rgba($limeNimi, .8);
+          @include long-shadow(text, darken($limeNimi, 10%), 70, true, false, right);
+        }
+        &:hover, &.active{
+          box-shadow: inset 3px 5px 0 rgba(255, 255, 255, 0.27);
+          border-top-right-radius: $border-radius / 2;
+          border-top-left-radius: $border-radius / 2;
+        }
+      }
+    }
+
+  }
+  .item{
+    width:100%;
+    height:700px;
+    > div{
+      height:100%;
+    }
+  }
+  .slide1{
+    background:url(../img/sliders/slide-1.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color:$white;
+
+    h1{
+      font-size:2.250em;
+      letter-spacing:5px;
+    }
+    h2{
+      font-weight:500;
+      font-size:1.250em;
+      letter-spacing:5px;
+      text-align: right;
+    }
+    p{
+      font-size:0.813em;
+    }
+    .choices{
+      display: inline-flex;
+      align-items: flex-start;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+  }
+  .slide2{
+    background: #9b65e6; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #9b65e6 0%, #5723a4 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #9b65e6 0%,#5723a4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #9b65e6 0%,#5723a4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b65e6', endColorstr='#5723a4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    h2{
+      font-size:5.313em;
+      font-weight:300;
+      b{
+        color:$white;
+        font-weight:500;
+        font-size:1.188em;
+        display: inline-block;
+      }
+    }
+    h3{
+      color:$white;
+      max-width:290px;
+      font-weight:300;
+      font-size:1.875em;
+    }
+    p{
+      max-width:290px;
+      font-size:0.750em;
+      color:$white;
+      letter-spacing: 1px;
+      position: relative;
+      &:after{
+         content:' ';
+         width:488px;
+         height:47px;
+         position: absolute;
+         bottom:-50px;
+         left:-45%;
+         background:url(../img/sliders/pshadow.png) no-repeat;
+       }
+    }
+  }
+  .slide3{
+    background:url(../img/sliders/slide-3.jpg) no-repeat;
+    background-size:cover;
+    color:$white;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    h2{
+      font-size:1.438em;
+      font-weight:500;
+    }
+    h3{
+      font-size:3.500em;
+      font-weight:300;
+    }
+    .whiten{
+      filter: brightness(100);
+    }
+    h4{
+      font-size:1.375em;
+      font-weight:300;
+    }
+    h4,p{
+      max-width:270px;
+      text-align: left;
+    }
+    p{
+      font-size:0.750em;
+      color:$white;
+      letter-spacing: 1px;
+      position: relative;
+      &:after{
+        content:' ';
+        width:488px;
+        height:47px;
+        position: absolute;
+        bottom:-50px;
+        left:-35%;
+        background:url(../img/sliders/pshadow2.png) no-repeat;
+      }
+    }
+    .nimiSmart{
+      position: relative;
+      .nimiHolding{
+        position: absolute;
+        top:-9px;
+        left: 100px;
+        right:0;
+        bottom: 0;
+        margin-right:auto;
+        margin-left:auto;
+      }
+    }
+  }
+  .slide4{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background:url(../img/sliders/slide-4.jpg) no-repeat;
+    background-size:cover;
+    color:$white;
+    h2{
+      font-size:1.438em;
+      color:darken($purpleNimi, 20%);
+      font-weight:500;
+    }
+    h3{
+      font-size:3.500em;
+      font-weight:300;
+    }
+    p{
+      max-width:430px;
+      position: relative;
+      &:after{
+        content:' ';
+        width:488px;
+        height:47px;
+        position: absolute;
+        bottom:-50px;
+        left:-10%;
+        background:url(../img/sliders/pshadow2.png) no-repeat;
+      }
+    }
+
+  }
+  .slide5{
+    background:url(../img/sliders/slide-5.jpg) no-repeat;
+    background-size:cover;
+    color:$white;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+      font-size:2.125em;
+      margin:0;
+      b{
+        font-weight:300;
+        font-size:1.618em;
+      }
+    }
   }
 }
-// Carousel Ends
+// Slider Ends
+
 
 .img-pop{
   position: absolute;
@@ -273,6 +541,37 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 @media (max-width: 414px) {
+  .slider{
+    .item{
+      > div{
+        padding-top:60px;
+      }
+    }
+    .slide3{
+      h4,p{
+        max-width: none;
+      }
+    }
+    .slider-indicators{
+      bottom: auto;
+      top: 20px;
+      left: -20px;
+      ul {
+        li {
+          text-indent: -9999px;
+          font-size: 0;
+          height: 50px;
+          width: 50px;
+          margin: 0 5px;
+          padding: 0 10px;
+          border-radius: 50px;
+          &.active {
+            border-top-right-radius: 50px;
+          }
+        }
+      }
+    }
+  }
   .footer {
     .logo-footer {
       margin: 50px auto 15px auto;
@@ -281,6 +580,22 @@ h1,h2,h3,h4,h5,h6{
       padding-bottom: 20px;
       h4 {
         margin-top: 15px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px)
+{
+  .slider{
+    .slide2, .slide3, .slide4{
+      .col-sm-12{
+        text-align:center;
+      }
+      h3,p{
+        max-width:none;
+      }
+      p:after{
+        left: 18%;
       }
     }
   }

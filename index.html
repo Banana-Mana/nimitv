@@ -71,29 +71,137 @@
 <!-- Header Ends -->
 
 <!-- Carousel -->
-<div class="slider">
+<div class="slider row">
     <div class="container-fluid">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+        <div id="main-sliders" class="carousel slide carousel-fade" data-ride="carousel" data-interval="99999">
+
+            <div class="slider-indicators">
+                <ul>
+                    <li id="goslide0" data-target="#main-sliders" data-slide-to="0" class="active">Super risi nga NimiTV</li>
+                    <li id="goslide1" data-target="#main-sliders" data-slide-to="1">Applikacioni për Smart Tv.</li>
+                    <li id="goslide2" data-target="#main-sliders" data-slide-to="2">Applikacioni për Smart Phone.</li>
+                    <li id="goslide3" data-target="#main-sliders" data-slide-to="3">Softveri për Pc, Mac dhe Linux.</li>
+                    <li id="goslide4" data-target="#main-sliders" data-slide-to="4">Android Tv & Box</li>
+                </ul>
+            </div>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="img/carousel-temp.png" alt="..." class="img-responsive">
+                <!-- Slide 1-->
+                <div class="item active" id="0">
+                    <div class="slide1">
+                        <div class="container">
+                            <div class="col-md-6 col-xs-12">
+                                <h1>SUPER RISI NGA NIMITV</h1>
+                                <h2>Shiko NimiTV në paisje të ndryshme</h2>
+                                <div class="choices">
+                                    <div class="col-md-5in1 animated fadeIn delay-125ms">
+                                        <img src="img/sliders/tv.png" alt="smart tv">
+                                        <p>SMART TV</p>
+                                    </div>
+                                    <div class="col-md-5in1 animated fadeIn delay-250ms">
+                                        <img src="img/sliders/tablet.png" alt="tablet icon">
+                                        <p>TABLET</p>
+                                    </div>
+                                    <div class="col-md-5in1 animated fadeIn delay-375ms">
+                                        <img src="img/sliders/phone.png" alt="smart phone">
+                                        <p>SMART PHONE</p>
+                                    </div>
+                                    <div class="col-md-5in1 animated fadeIn delay-500ms">
+                                        <img src="img/sliders/desktop.png" alt="desktop pc">
+                                        <p>DESKTOP</p>
+                                    </div>
+                                    <div class="col-md-5in1 animated fadeIn delay-750ms">
+                                        <img src="img/sliders/android-box.png" alt="android box">
+                                        <p>ANDROID BOX</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="img/carousel-temp.png" alt="..." class="img-responsive">
+                <!-- Slide 1 Ends -->
+
+                <!-- Slide 2 Starts -->
+                <div class="item" id="1">
+                    <div class="slide2">
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 animated fadeInUp">
+                                <h2>smarttv<b>APP</b></h2>
+                                <h3>Instalo aplikacionin më të ri për Smart TV!</h3>
+                                <p>Tani mund të instaloni aplikacionin për Smart Tv në
+                                    telivizorat Samsung, Lg, dhe Sony. NimiTv 1000+ Kanale, platforma më e madhe shqiptare.
+                                </p><br><br>
+                                <img src="img/smart-icons.png" alt="smart tv icons" class="img-responsive inline-block">
+                            </div>
+                        <img src="img/sliders/slide-2-tv.png" alt="nimitv tv icon" class="hidden-xs img-responsive slide2MainImg animated fadeInRight  delay-375ms">
+                    </div>
                 </div>
+                <!-- Slide 2 Ends-->
+
+                <!-- Slide 3 Starts -->
+                <div class="item" id="2">
+                    <div class="slide3">
+                        <div class="container">
+                            <div class="col-md-6 col-sm-12 text-center animated fadeInUp">
+                                <h2>Shkarko Aplikacionin për</h2>
+                                <h3>SMART PHONE</h3>
+                                <img src="img/android-ios.png" alt="android ios" class="whiten">
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4 col-sm-12 animated fadeInUp delay-250ms">
+                                <h4>Instalo aplikacionin më të ri për <b>Smart Phone!</b></h4>
+                                <p>
+                                    Shikoni kanalet tuaja të preferuara ku do që jeni dhe në gjdo kohë. Me aplikacionin e NimiTV per telefona të zgjuar dhe tablet në sistemin operativ iOS dhe Android mund të shikoni 1000+ kanale si do që të jetë lidhja e juaj e internetit: WiFi, 3G apo 4G.
+                                </p>
+                            </div>
+                            <div class="nimiSmart animated fadeInUp">
+                                <img src="img/sliders/nimi-holding.png" class="visible-lg img-responsive nimiHolding" alt="nimi holding pose">
+                                <img src="img/sliders/nimiphone.png" class="img-responsive inline-block" alt="smart tv apps">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 Ends -->
+
+                <!-- Slide 4 Starts -->
+                <div class="item" id="3">
+                    <div class="slide4">
+                        <div class="col-lg-4 col-md-12 col-sm-12 animated fadeInUp">
+                            <h2>Shkarko softverin për</h2>
+                            <h3>PC / MAC / LINUX</h3>
+                            <p>Shikoni kanalet tuaja të preferuara ne Laptop apo në desktop ku do që të jeni. NimiTV Player është një software unik që është I dedikuar për PC me sistem windows, Apple apo Linux. </p>
+                            <br><br>
+                            <img src="img/pcs.png" alt="pc icons">
+                        </div>
+                        <img src="img/sliders/pc-app.png" alt="nimitv pc app icon" class="img-responsive slide2MainImg animated fadeInRight  delay-375ms">
+
+                    </div>
+                </div>
+                <!-- Slide 4 Ends -->
+
+                <!-- Slide 5 Starts -->
+                <div class="item" id="4">
+                    <div class="slide5">
+                        <h2 class="animated fadeInUp">
+                            Instalo softverin në
+                            <b>ANDROID TV&BOX</b>
+                        </h2>
+                        <p class="animated fadeInUp delay-125ms">Për të gjithë ju që posedoni Android TV Box-in nga platformat tjera televizive tani mund ta instaloni
+                            Platformën NimiTV në boxin e lart përmedur.</p>
+                        <div class="row animated fadeInUp delay-375ms">
+                            <img class="img-responsive hidden-md hidden-sm hidden-xs inline-block" src="img/sliders/nimi-pose2.png" alt="nimi pose">
+                            <img class="img-responsive inline-block" src="img/sliders/android-tv.png" alt="nimi android tv app">
+                        </div>
+                        <div class="row animated fadeInUp delay-500ms">
+                            <img class="img-responsive inline-block" src="img/sliders/android-tv-logo.png" alt="android tv logo">
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 Ends -->
             </div>
 
         </div>
     </div>
-
 </div>
 <!-- Carousel Ends-->
 
@@ -285,6 +393,14 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/isScrolledIntoView.js"></script>
 <script>
+
+        $('#main-sliders').carousel();
+        $('#main-sliders').on('slid.bs.carousel', function() {
+            var to_slide = $('.carousel-inner .item.active').attr('id');
+            $('.slider-indicators li').removeClass('active');
+            $('#goslide' + to_slide).addClass('active');
+        });
+
     $('#menu-trigger').click(function() {
         $(this).toggleClass('active');
         $("#menu-trigger").find("> .bar").toggleClass('animate');
@@ -305,7 +421,6 @@
             $('.nimiboy').addClass('animated fadeInRight');
         }
         if ($('.films p').isOnScreen() == true) {
-            $('.films').addClass('animated fadeInUp');
             $('.title.orange').addClass('animated fadeInUp');
             $('.filmspic').addClass('animated fadeInUp');
             $('.filmsImg').addClass('animated animated fadeInUp delay-125ms');
