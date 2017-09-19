@@ -670,6 +670,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   position: relative;
   margin-bottom: 30px; }
+  .title.red h2 {
+    color: #ff0d4c; }
   .title.purple h2 {
     color: #cd036f; }
   .title.lime h2 {

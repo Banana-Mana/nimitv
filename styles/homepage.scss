@@ -4,6 +4,11 @@
   margin:0 auto;
   position: relative;
   margin-bottom:30px;
+  &.red{
+    h2{
+      color:$redNimi;
+    }
+  }
   &.purple{
     h2{
       color:$purpleNimi;
