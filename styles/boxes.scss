@@ -1,0 +1,86 @@
+
+$redNimi: #ff0d4c;
+$purpleNimi: #cd036f;
+$blueNimi: #038dca;
+$limeNimi: #a4be15;
+$orangeNimi: #ff8707;
+
+$white: white;
+$black: #000;
+$grey: grey;
+
+
+$border-radius:10px;
+$cute-shadow:0 16px 38px -21px rgba(0,0,0,.9);
+
+// Boxes
+.option-boxes {
+  background: rgba(0,0,0,.03);
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+  max-height: 0;
+  padding:0;
+  &.active{
+    padding: 30px 0;
+    max-height: 700px;
+  }
+  .img-responsive {
+    margin: 15px auto;
+  }
+
+ .box {
+    border: 1px solid;
+    border-radius: $border-radius;
+    min-height: 280px;
+    padding: 15px;
+    box-shadow:$cute-shadow;
+    text-align:center;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    position: relative;
+    top:0;
+   transition:top 150ms ease;
+ }
+  h3{
+    color:$black;
+  }
+  .first-row-box {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .tv-4k-box {
+      border-color: lighten($blueNimi, 40%);
+    }
+    .smart-tv {
+      border-color: lighten($purpleNimi, 40%);
+    }
+    .android-tv {
+      border-color: lighten($limeNimi, 30%);
+    }
+    .pc-mac {
+      margin-top: 30px;
+      border-color: lighten($orangeNimi, 25%);
+    }
+    .smart-phone {
+      margin-top: 30px;
+      border-color: lighten($redNimi, 25%);
+    }
+  }
+  a:hover{
+    .box{
+      top:-5px;
+      background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.15) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.15) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    }
+  }
+}
+// Boxes Ends
