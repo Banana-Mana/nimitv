@@ -94,6 +94,11 @@ h1,h2,h3,h4,h5,h6{
       border-bottom:1px solid darken($purpleNimi, 10%);;
     }
   }
+  &.btn-red{
+    background:$redNimi;
+    border-bottom:4px solid darken($redNimi, 10%);
+    color:$white;
+  }
   &.btn-blue{
     background:$blueNimi;
     border-bottom:4px solid darken($blueNimi, 10%);
@@ -497,6 +502,44 @@ h1,h2,h3,h4,h5,h6{
   top:0;
   left: 0;
 }
+
+/****Option roof starts*****/
+.option-roof {
+  font-weight: 700;
+  position: relative;
+  margin: 50px auto 50px auto;
+  font-size: 1.2em;
+  line-height: 30px;
+  color: $white;
+  z-index: 0;
+  text-align: center;
+
+  &::before {
+    width: 25px;
+    height: 25px;
+    background: $redNimi;
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: -3;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border: 2px solid $redNimi;
+    top:-25px;
+    width: 100%;
+    padding: 35px;
+    height: 40px;
+    border-top-right-radius:250px;
+    border-top-left-radius:250px;
+    border-bottom: transparent;
+  }
+}
+/****Option roof Ends*****/
+
 
 /***Footer Starts****/
 .footer {

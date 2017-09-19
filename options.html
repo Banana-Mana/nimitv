@@ -62,13 +62,13 @@
         <div class="col-md-8 menubar" id="menubar">
 
             <ul>
-                <li><a href="#" title="home"><img src="img/icon-home.png" alt="Home"
+                <li><a href="index.html" title="home"><img src="img/icon-home.png" alt="Home"
                                                                  class="img-responsive"> <span>Ballina</span></a></li>
-                <li><a href="index.html" title="home"><img src="img/icon-about-us.png" alt="About Us" class="img-responsive">
+                <li><a href="#" title="about us"><img src="img/icon-about-us.png" alt="About Us" class="img-responsive">
                     <span>Për Ne</span></a></li>
                 <li class="active"><a href="options.html" title="home"><img src="img/icon-options.png" alt="Options" class="img-responsive">
                     <span>Opcionet</span></a></li>
-                <li><a href="#" title="home"><img src="img/icon-buy.png" alt="Buy" class="img-responsive">
+                <li><a href="options.html" title="home"><img src="img/icon-buy.png" alt="Buy" class="img-responsive">
                     <span>Porosit</span></a></li>
                 <li><a href="#" title="home"><img src="img/icon-refresh.png" alt="Refresh" class="img-responsive">
                     <span>Riabonimi</span></a></li>
@@ -87,6 +87,7 @@
     <div class="row first-row-box">
 
         <!--tv alb starts-->
+        <a href="#">
         <div class="col-md-4 col-sm-4 hidden-xs">
             <div class="col-md-12 box tv-4k-box">
                 <h3>
@@ -109,9 +110,11 @@
                 </h3>
             </div>
         </div>
+        </a>
         <!--tv alb ends-->
 
         <!--smart tv starts-->
+        <a href="#">
         <div class="col-md-4 col-sm-4 hidden-xs">
             <div class="col-md-12 box smart-tv">
                 <h3>SMART TV APP<br>
@@ -133,9 +136,11 @@
                 </h3>
             </div>
         </div>
+        </a>
         <!--smart tv ends-->
 
         <!--android starts-->
+        <a href="#">
         <div class="col-md-4 col-sm-4 hidden-xs">
             <div class="col-md-12 box android-tv">
                 <h3>ANDROID TV&BOX<br>
@@ -156,9 +161,11 @@
                 </h3>
             </div>
         </div>
+        </a>
         <!--android ends-->
 
         <!--pc/mac starts-->
+        <a href="#">
         <div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2 hidden-xs">
             <div class="col-md-12 box pc-mac">
                 <h3>PC / MAC<br>
@@ -179,10 +186,12 @@
                 </h3>
             </div>
         </div>
+        </a>
         <!--pc/mac ends-->
 
 
         <!--smart phone starts-->
+        <a href="#">
         <div class="col-md-4 col-sm-4 hidden-xs">
             <div class="col-md-12 box smart-phone">
                 <h3>SMART PHONE<br>
@@ -207,6 +216,7 @@
                 </h3>
             </div>
         </div>
+        </a>
         <!--smart phone ends-->
     </div>
 </div>
@@ -251,5 +261,16 @@
         });
     });
 </script>
+
+<!--menu open/close mobile starts-->
+<script>
+    $('#menu-trigger').click(function() {
+        $(this).toggleClass('active');
+        $("#menu-trigger").find("> .bar").toggleClass('animate');
+        $('#menubar').toggleClass('active');
+    });
+</script>
+<!--menu open/close mobile ends-->
+
 </body>
 </html>
