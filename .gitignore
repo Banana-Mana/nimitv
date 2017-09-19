@@ -1,3 +1,8 @@
 .sass-cache/
 *.css.map
 *.css
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/nimitv.iml
+.idea/watcherTasks.xml
+.idea/workspace.xml
