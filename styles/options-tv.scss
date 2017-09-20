@@ -1,8 +1,5 @@
 @import "global";
-.img-responsive{
-  display: inline-block;
-  margin: 0 auto;
-}
+
 /*Tabs Starts*/
 .smart-tabs {
   margin: 50px auto 70px auto;
@@ -148,6 +145,10 @@
 
 /***lg part starts***/
 .lg-part {
+  .img-responsive{
+    display: inline-block;
+    margin: 0 auto;
+  }
   .instruction {
     margin-bottom: 70px;
   }
@@ -173,6 +174,10 @@
 
 /*****samsung start*****/
 .samsung-part {
+  .img-responsive{
+    display: inline-block;
+    margin: 0 auto;
+  }
   ul {
     list-style-type: none;
     li{
@@ -200,7 +205,6 @@
     ol {
       list-style-type: none;
       counter-reset: item;
-
       li {
         margin-top: 25px;
         &::before {
@@ -248,7 +252,6 @@
   .smart-inner .smart-inner-left a {
     margin: 30px 10px;
   }
-
 }
 
 @media (max-width: 768px) {
